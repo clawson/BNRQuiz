@@ -14,6 +14,8 @@
 		16DD0CE81AB47D7A00B6139D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16DD0CE71AB47D7A00B6139D /* Images.xcassets */; };
 		16DD0CEB1AB47D7A00B6139D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16DD0CE91AB47D7A00B6139D /* LaunchScreen.xib */; };
 		16DD0CF71AB47D7A00B6139D /* QuizTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DD0CF61AB47D7A00B6139D /* QuizTests.m */; };
+		16DD0D031AB47E5B00B6139D /* QuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DD0D011AB47E5B00B6139D /* QuizViewController.m */; };
+		16DD0D041AB47E5B00B6139D /* QuizViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16DD0D021AB47E5B00B6139D /* QuizViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 		16DD0CF01AB47D7A00B6139D /* QuizTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuizTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		16DD0CF51AB47D7A00B6139D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16DD0CF61AB47D7A00B6139D /* QuizTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuizTests.m; sourceTree = "<group>"; };
+		16DD0D001AB47E5B00B6139D /* QuizViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizViewController.h; sourceTree = "<group>"; };
+		16DD0D011AB47E5B00B6139D /* QuizViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizViewController.m; sourceTree = "<group>"; };
+		16DD0D021AB47E5B00B6139D /* QuizViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuizViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +68,9 @@
 		16DD0CCE1AB47D7A00B6139D = {
 			isa = PBXGroup;
 			children = (
+				16DD0D001AB47E5B00B6139D /* QuizViewController.h */,
+				16DD0D011AB47E5B00B6139D /* QuizViewController.m */,
+				16DD0D021AB47E5B00B6139D /* QuizViewController.xib */,
 				16DD0CD91AB47D7A00B6139D /* Quiz */,
 				16DD0CF31AB47D7A00B6139D /* QuizTests */,
 				16DD0CD81AB47D7A00B6139D /* Products */,
@@ -168,9 +176,11 @@
 				TargetAttributes = {
 					16DD0CD61AB47D7A00B6139D = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = M873X5AQJY;
 					};
 					16DD0CEF1AB47D7A00B6139D = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = M873X5AQJY;
 						TestTargetID = 16DD0CD61AB47D7A00B6139D;
 					};
 				};
@@ -202,6 +212,7 @@
 				16DD0CE61AB47D7A00B6139D /* Main.storyboard in Resources */,
 				16DD0CEB1AB47D7A00B6139D /* LaunchScreen.xib in Resources */,
 				16DD0CE81AB47D7A00B6139D /* Images.xcassets in Resources */,
+				16DD0D041AB47E5B00B6139D /* QuizViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +233,7 @@
 				16DD0CE31AB47D7A00B6139D /* ViewController.m in Sources */,
 				16DD0CE01AB47D7A00B6139D /* AppDelegate.m in Sources */,
 				16DD0CDD1AB47D7A00B6139D /* main.m in Sources */,
+				16DD0D031AB47E5B00B6139D /* QuizViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +377,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -376,6 +390,7 @@
 				INFOPLIST_FILE = QuizTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quiz.app/Quiz";
 			};
 			name = Debug;
@@ -384,6 +399,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -391,6 +408,7 @@
 				INFOPLIST_FILE = QuizTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quiz.app/Quiz";
 			};
 			name = Release;
@@ -414,6 +432,7 @@
 				16DD0CFC1AB47D7A00B6139D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		16DD0CFD1AB47D7A00B6139D /* Build configuration list for PBXNativeTarget "QuizTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +441,7 @@
 				16DD0CFF1AB47D7A00B6139D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

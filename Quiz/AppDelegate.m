@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "QuizViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    QuizViewController *quizVC = [[QuizViewController alloc] init];
+    self.window.rootViewController = quizVC;
+    
     return YES;
 }
 
